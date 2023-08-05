@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: w;
+    src: url(./fonts/WanoQuin-ExtraBold.otf);
+}
+
+
+body{
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    background-color: #141414;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    z-index: 1000;
+}
+
+.navbar span{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 50px;
+    background: linear-gradient(90deg , transparent , #fff);
+    animation: animate 5s infinite linear;
+}
+
+/* ... Other CSS rules ... */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the social media icons horizontally */
+  padding: 1rem 3rem;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  z-index: 1000;
+}
+
+.navbar .menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 5px; /* Add a small gap between the social media icons */
+}
+
+.navbar .menu li {
+  margin-right: 5px; /* Adjust the gap between each social media icon */
+}
+
+.navbar .menu li:last-child {
+  margin-right: 0; /* Remove right margin from the last icon */
+}
+
+.navbar .menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbar .menu li a:hover {
+  color: #1f53ff;
+}
+
+/* ... Other CSS rules ... */
+
+
+
+@keyframes animate {
+    0%{
+        left: 0;
+        transform: translate(-100%);
+    }
+    100%{
+        left: 100%;
+        transform: translate(0%);
+    }
+}
+
+.logo{
+    text-transform: capitalize;
+    font-size: 30px;
+    cursor: pointer;
+    font-family: w;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu{
+    display: flex;
+    gap: 5rem;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+
+.btn{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+
+.wrapper{
+    display: flex;
+}
+
+section{
+    width: 100vw;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.video-section video{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -2;
+    position: relative;
+}
+
+.img-container{
+    position: absolute;
+    top:0;
+    height: 100vh;
+    width: 100vw;
+    overflow: scroll;
+}
+
+
+.img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+}
+
+
+
+.section{
+    background-color: #141414;
+    padding: 7rem;
+}
+
+.boxes-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
+.columns{
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.col img{
+    object-fit: cover;
+}
+
+
+.col-1{
+    display: flex;
+    gap: 1.5rem;
+    flex: 5;
+}
+.box1 .col-1 img:first-child{
+    width: 200px;
+    height: 280px;
+    transform: translateY(-30px);
+}
+
+.box1 .col-1 img:nth-child(2){
+    width: 280px;
+    height: 320px;
+}
+
+.col-3{
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    flex: 4;
+}
+
+.box1 .col-3 img:first-child{
+    width: 320px;
+    height: 170px;
+
+}
+
+.box1 .col-3 img:nth-child(2){
+    width: 150px;
+}
+.box1 .col-3 img:nth-child(3){
+    width: 200px;
+    height: 200px;
+}
+
+.col-2{
+    margin: auto;
+    flex: 1.5;
+}
+
+.col-2 h1{
+    font-family: w;
+    font-size: 100px;
+    text-transform: capitalize;
+    position: absolute;
+    top: 50px;
+    left: 47%;
+    z-index: 100;
+}
+.box1 .col-2 h1{
+    top: 0;
+}
+
+
+.col-2 span{
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing:3px;
+    opacity: .7;
+}
+
+
+.line{
+    height: 1px;
+    width: 50px;
+    background-color: rgba(255, 255, 255, .1);
+    margin: 2rem 0;
+}
+
+.text-box p{
+    font-size: 12px;
+    line-height: 1.9;
+    padding-bottom: 1rem;
+    opacity: .7;
+    
+}
+
+.box2 .col-1 img:first-child{
+    width: 200px;
+    height: 250px;
+    transform: translateY(200px);
+}
+
+
+.box2 .col-1 img:nth-child(2){
+    height: 380px;
+    width: 300px;
+}
+.box2 .col-3 img:nth-child(1){
+    height: 300px;
+    width: 220px;
+}
+
+.box2 .col-3 img:nth-child(2){
+    width: 180px;
+    height: 200px;
+    align-self: flex-end;
+}
+.box2 .col-3 img:nth-child(3){
+    width: 380px;
+    height: 200px;
+    transform: translateX(80px);
+}
+
+
+.box3 .col-1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.box3 .col-1 img:nth-child(1){
+    flex: 1;
+    width: 200px;
+    height: 280px;
+    transform: translateX(30px);
+    
+    
+}
+.box3 .col-1 img:nth-child(2){
+    width: 180px;
+    height: 200px;
+    margin-left: 80px;
+    align-self: center;
+    
+}
+.box3 .col-1 img:nth-child(3){
+    width: 280px;
+    height: 180px;
+    
+}
+.box3 .col-1 img:nth-child(4){
+    width: 250px;
+    height: 180px;
+    transform: translateY(-30px);
+}
+
+.box3 .col-3 img{
+    width: 400px;
+    height: auto;
+}
+
+.box4 {
+    background-color: #141414;
+    padding: 7rem;
+}
+
+.col-6 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.box4 .grid-container img:nth-child(1),
+    .box4 .grid-container img:nth-child(3) {
+        width: 380px;
+        height: 220px;
+    }
+
+    .box4 .grid-container img:nth-child(2),
+    .box4 .grid-container img:nth-child(5),
+    .box4 .grid-container img:nth-child(6) {
+        width: 220px;
+        height: 380px;
+    }
+
+    .box4 .grid-container img:nth-child(4) {
+        width: 220px;
+        height: 220px;
+    }
+
+    .grid-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .grid-container img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+footer{
+    background-color: #141414;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+}
+
+
+.text-content{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.title{
+    font-family: w;
+    width: 450px;
+    position: relative;
+    height: 110px;
+    overflow: hidden;
+}
+
+.bg{
+    font-size: 100px;
+}
+
+.sm{
+    font-size: 35px;
+    height: 40px;
+}
+
+.left{
+    left: -25%;
+}
+
+.right{
+    top: 50px;
+    left: 75%;
+}
+
+.title span{
+    position: absolute;
+}
+
+.n{
+    z-index: -1;
+    
+}
+
+.text-content p{
+    transform: translateY(150px);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 12px;
+    font-weight: 300;
+}
+
+.v_container{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* opacity: 0; */
+}
+
+
+.left-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4rem;
+    gap: 5rem;
+}
+
+.tv{
+    font-family: w;
+    display: flex;
+    text-transform: capitalize;
+}
+
+.bottom{
+    transform: translateY(70px);
+}
+
+
+
+.text-container{
+    max-width: 260px;
+}
+
+.text-container p{
+    padding-bottom: 1rem;
+    line-height: 1.4;
+    opacity: .8;
+}
+
+
+.right-side{
+    /* background-color: blue; */
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-color: rgba(255, 255, 255, .6);
+    border-radius: 50%;
+    position: relative;
+}
+
+.right-side p{
+    position: absolute;
+    top: 45%;
+    left: -15%;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.fa-arrow-right-long{
+    transform: translateX(20px);
+}
+
+/* mobile view */
+@media screen and (max-width: 768px) {
+  .navbar .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Align social media icons vertically on mobile */
+  }
+
+  .navbar .menu li {
+    margin-right: 0; /* Remove the right margin on mobile */
+    margin-bottom: 10px; /* Add spacing between the social media icons on mobile */
+  }
+
+  .navbar .menu li:last-child {
+    margin-bottom: 0; /* Remove the bottom margin from the last icon on mobile */
+  }
+
+  .v_container {
+    grid-template-columns: 1fr; /* Change the grid layout to single column on mobile */
+  }
+
+  .right-side {
+    margin: 0; /* Remove the margin for the right-side element */
+  }
+
+  .right-side p {
+    position: static; /* Remove the absolute positioning for the right-side text */
+    text-align: center; /* Center the text */
+  }
+
+  .grid-container img {
+    width: 100%; /* Make images take 100% width on mobile */
+    height: auto; /* Auto-adjust height to maintain aspect ratio */
+  }
+
+  .img-container {
+    display: none; /* Hide the background image container on mobile */
+  }
+
+  .left-side {
+    padding: 2rem 1rem; /* Reduce the padding for the left-side content on mobile */
+  }
+
+  .left-side .tv {
+    font-size: 25px; /* Reduce the font size of the TV text on mobile */
+  }
+
+  .left-side .text-container {
+    max-width: 100%; /* Make text container take 100% width on mobile */
+  }
+
+  .footer {
+    flex-direction: column; /* Align footer content vertically on mobile */
+  }
+}
+</style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+          <ul class="menu">
+            <li>
+              <a href="https://instagram.com/_jonasmenezes_?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D" target="_blank">
+                <!-- Instagram logo -->
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=100013296438595&mibextid=ZbWKwL" target="_blank">
+                <!-- Facebook logo -->
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.snapchat.com/add/jonasmenezes09?share_id=pmpPWab10-4&locale=en-US" target="_blank">
+                <!-- Snapchat logo -->
+                <i class="fab fa-snapchat"></i>
+              </a>
+            </li>
+           
+          </ul>
+          <div>
+          <a href="tel:+917767040519">             -Call us at 7767040519</a>
+        </div>
+        </nav>
+      </header>
+      
+      
+
+    <div class="wrapper">
+        <section class="video-section">
+            <div class="video-container">
+                <video src="./media/flower.mp4" autoplay loop muted></video>
+            </div>
+            <div class="img-container">
+                <img src="./media/window.png" alt="" class="img">
+            </div>
+
+            <div class="text-content">
+                <div class="img_txt">
+                    <div class="title sm left">
+                        <span></span>
+                    </div>
+                    <div class="title bg left">
+                        <span>Jonas</span>
+                    </div>
+                    <div class="title bg right n">
+                        <span></span>
+                    </div>
+                    <div class="title bg right">
+                        <span>menezes</span>
+                    </div>
+                </div>
+                <p class="txt-bottom">
+                    shots that will change your mind
+                </p>
+            </div>
+
+            <div class="v_container">
+                <div class="left-side">
+                    <div class="tv">
+                        <div class="bg">push</div>
+                        <div class="sm">the</div>
+                        <div class="bg bottom">envelope</div>
+                    </div>
+                    <div class="text-container">
+                        <p>
+                         
+                        </p>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <p> <i class="fa-solid fa-arrow-right-long"></i></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="boxes-container">
+                <div class="columns box1">
+                    <div class="col col-1">
+                        <img src="./media/Anni3.jpg" alt="">
+                        <img src="./media/couple2.jpg" alt="">
+                        
+                    </div>
+                    <div class="col-2">
+                        <h1>Ceremony</h1>
+                        <span>28 october 2021</span>
+                        <div class="line"></div>
+                        <div class="text-box">
+                            <p>
+                                "Capturing cherished moments of love and joy, I had the honor of preserving the magic of a
+                                 beautiful wedding ceremony 
+                                through my lens. Witness the timeless essence of love in my photography portfolio."
+                            </p>
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col col-3">
+                        <img src="./media/Anni1.jpg" alt="">
+                        <img src="./media/Anni2.jpg" alt="">
+                        <img src="./media/Anni4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="columns box2">
+                    <div class="col col-1">
+                        <img src="./media/birth2.jpg" alt="">
+                        <img src="./media/birth4.jpg" alt="">
+                    </div>
+                    <div class="col-2">
+                        <h1>Birthday</h1>
+                        <span></span>
+                        <div class="line"></div>
+                        <div class="text-box">
+                            <p>
+                               "Life is not measured by the numbers of breath we take but 
+                               by the moments that take our breath away 
+                                                                       -Maya Angelou"
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col col-3">
+                        <img src="./media/birth1.jpg" alt="">
+                        <img src="./media/birth3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="columns box4">
+                    <div class="col-2">
+                        <h1>Events</h1>
+                    <div class="col col-6">
+                       
+                        <div class="grid-container">
+                            <img src="./media/eve1.jpg" alt="">
+                            <img src="./media/eve2.jpg" alt="">
+                            <img src="./media/eve3.jpg" alt="">
+                            <img src="./media/eve4.jpg" alt="">
+                            <img src="./media/eve5.jpg" alt="">
+                            <img src="./media/eve6.jpg" alt="">
+
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <footer>
+        <div class="logo"><a href="#">eraf</a></div>
+        <div class="btn">instagram</div>
+    </footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.defaults({
+  toggleActions:"play none none reverse"
+});
+
+
+gsap.to('.img-container',{
+  scale:52,
+  ease:"ease",
+  scrollTrigger:{
+    trigger:'.video-section',
+    scrub:1,
+    start:"top top",
+    end:"bottom",
+    pin:true
+  }
+})
+
+
+gsap.to('.right' ,{
+  autoAlpha:0,
+  x:500,
+  duration:1.5,
+  scrollTrigger:{
+    start:1
+  }
+})
+gsap.to('.left' ,{
+  autoAlpha:0,
+  x:-500,
+  duration:1.5,
+  scrollTrigger:{
+    start:1
+  }
+})
+
+
+gsap.to('.txt-bottom',{
+  autoAlpha:0,
+  letterSpacing:-10,
+  duration:2,
+  scrollTrigger:{
+    start:2
+  }
+})
+
+
+const tl = gsap.timeline();
+
+tl.from('.left-side div',{
+  y:150,
+  opacity:0,
+  stagger:{
+    amount:.4
+  },
+  delay:.5
+}).from('.right-side',{opacity:0,duration:2},.5)
+.to('.wrapper' ,{x:-window.innerWidth})
+
+
+
+ScrollTrigger.create({
+  animation:tl,
+  trigger:'.wrapper',
+  start:"top top",
+  end:"+=300",
+  scrub:1,
+  pin:true,
+  ease:"ease"
+});
+
+
+
+gsap.utils.toArray('.col').forEach(image=>{
+  gsap.fromTo(image,{
+    opacity:.3,
+    x:0
+  },{
+    opacity:1,
+    x:-50,
+    scrollTrigger:{
+      trigger:image,
+      start:"10%",
+      stagger:{
+        amount:.4
+      }
+    }
+  })
+})
+
+const timeline = gsap.timeline();
+
+timeline.from('.title span' ,{
+  y:150,
+  skewY:7,
+  duration:3
+}).from('.txt-bottom',{
+  letterSpacing:-10,
+  opacity:0,
+  duration:3
+})
+</script>
+
+</html>
